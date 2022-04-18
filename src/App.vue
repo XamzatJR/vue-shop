@@ -9,12 +9,33 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 :root {
   --primary-btn: #535353;
-  --secondary-btn: #d1d1d1;
+  --secondary-btn: #ffa927;
+  --tertiary-btn: #d1d1d1;
+  --green-btn: #16c1a1;
+  --red-btn: #ff4d4d;
+  --purple-btn: #821bf0;
+  --pink-btn: #e127ff;
+
+  --bg-color: #ebe9ff;
+  --bgsec-color: #fff4e4;
+  --fire-color: #ffa927;
+  --stroke-color: #4f28ea;
+  --price-color: #535353;
+  --title-text-color: #535353;
+  --secondary-text-color: #ababab;
+  --header-text-color: #6c6c6c;
+  --p-text-color: #848484;
+
+  --footer: #413e70;
+  --rating: #ffa927;
+  --rating-disabled: rgba(255, 169, 39, 0.4);
+  --image-color: #e9e9e9;
 }
+*,
 body {
   margin: 0;
   padding: 0;
