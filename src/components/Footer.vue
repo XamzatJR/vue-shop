@@ -2,7 +2,7 @@
   <footer class="footer">
     <section class="footer-left">
       <div><img src="../assets/icons/footer-logo.svg" alt="" /></div>
-      <div>
+      <div class="payment">
         <div class="cards">
           <div class="cards__card visa"><img src="../assets/icons/visa.png" alt="" /></div>
           <div class="cards__card"><img src="../assets/icons/mastercard.png" alt="" /></div>
@@ -29,11 +29,14 @@
           <li><a class="nav-list__item" href="#">Помощь</a></li>
         </ul>
       </nav>
-      <div>
-        <button>Вверх</button>
+      <div class="footer-center__bottom">
+        <div class="up">
+          <img class="up__arrow" src="../assets/icons/Arrow-icon.svg" alt="" />
+          <button class="up__btn">Вверх</button>
+        </div>
       </div>
     </section>
-    <section footer-right>
+    <section class="footer-right">
       <div class="icons">
         <img class="icon" :src="userIcon" alt="" />
         <img class="icon" :src="starIcon" alt="" />
@@ -43,14 +46,9 @@
           <span class="cart__counter">1</span>
         </label>
       </div>
-      <div class="navbar-center">
-        <a class="a tel" href="tel:+7495-755-6983">+74957556983</a>
-        <a class="a email" href="mailto:nonamemag@gmail.com">nonamemag@gmail.com</a>
-      </div>
-      <div class="socials">
-        <div class="socials__item"></div>
-        <div class="socials__item"></div>
-        <div class="socials__item"></div>
+      <div class="contact-details">
+        <a class="tel" href="tel:+7495-755-6983">+74957556983</a>
+        <a class="email" href="mailto:nonamemag@gmail.com">nonamemag@gmail.com</a>
       </div>
     </section>
   </footer>
@@ -76,17 +74,43 @@ export default {
 <style lang="scss" scoped>
 .footer {
   padding: 0 109px;
-  height: 317px;
+  height: 36vh;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: var(--footer);
   color: #fff;
+  &-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  &-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 57%;
+  }
+  &-right {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .nav {
   display: flex;
   justify-content: space-between;
   height: 109px;
+  width: 616px;
   &-list {
     list-style-type: none;
     display: flex;
@@ -96,6 +120,50 @@ export default {
       color: #fff;
     }
   }
+}
+
+.up {
+  display: flex;
+  flex-direction: column;
+  &__arrow {
+    height: 26px;
+    animation: arrow 1.3s infinite alternate ease-out;
+  }
+  &__btn {
+    color: #fff;
+    border: none;
+    background-color: inherit;
+    position: relative;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    &::after {
+      content: '';
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      height: 2px;
+      background-color: #fff;
+      transform-origin: bottom right;
+      transition: transform 0.5s ease-out;
+    }
+  }
+}
+@keyframes arrow {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+.payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20%;
 }
 .cards {
   display: flex;
@@ -123,7 +191,7 @@ export default {
   margin-right: 17px;
   & .icon {
     cursor: pointer;
-    filter: invert(100%) sepia(29%) saturate(0%) hue-rotate(221deg) brightness(107%) contrast(101%);
+    filter: brightness(0) invert(1);
   }
   & .cart {
     position: relative;
@@ -142,6 +210,34 @@ export default {
       background-color: #fff;
       border-radius: 50%;
     }
+  }
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  & .tel {
+    margin-bottom: 0.75rem;
+  }
+  & .tel,
+  .email {
+    color: #fff;
+  }
+  & .tel::before,
+  & .email::before {
+    filter: brightness(0) invert(1);
+    margin-right: 6px;
+    vertical-align: middle;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+  & .tel::before {
+    content: url('../assets/icons/telephone.svg');
+    color: #fff;
+  }
+  & .email::before {
+    color: #fff;
+    content: url('../assets/icons/email.svg');
   }
 }
 </style>
