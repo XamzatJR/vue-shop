@@ -149,8 +149,8 @@ export default {
     }
     &__btn {
       position: absolute;
-      bottom: -7px;
-      right: 0;
+      bottom: -3px;
+      right: 8px;
       width: 40px;
       height: 37px;
       border: none;
