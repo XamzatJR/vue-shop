@@ -18,15 +18,15 @@ export default {
   --green-btn: #16c1a1;
   --red-btn: #ff4d4d;
   --purple-btn: #821bf0;
+  --blue-btn: #4f28ea;
   --pink-btn: #e127ff;
 
   --bg-color: #ebe9ff;
   --bgsec-color: #fff4e4;
   --fire-color: #ffa927;
-  --stroke-color: #4f28ea;
   --price-color: #535353;
   --title-text-color: #535353;
-  --secondary-text-color: #ababab;
+  --tertiary-text-color: #ababab;
   --header-text-color: #6c6c6c;
   --p-text-color: #848484;
 
