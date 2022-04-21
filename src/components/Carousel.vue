@@ -12,17 +12,18 @@
       </svg>
     </button>
     <section class="carousel__main">
-      <div class="carousel__viewport">
-        <div class="carousel__slide-left">
-          <h2 class="carousel__title">Безусловно, теория требует одобрения</h2>
-          <p class="carousel__p">
-            Господа, высокотехнологичная концепция общественного уклада не даёт нам иного выбора,
-            кроме определения форм
-          </p>
-          <button class="carousel__btn">Узнать больше</button>
-        </div>
-        <div class="carousel__slide-right"></div>
-      </div>
+      <slot
+        ><div class="carousel__viewport">
+          <div class="carousel__slide-left">
+            <h2 class="carousel__title">Безусловно, теория требует одобрения</h2>
+            <p class="carousel__p">
+              Господа, высокотехнологичная концепция общественного уклада не даёт нам иного выбора,
+              кроме определения форм
+            </p>
+            <Btn class="btn__red">Узнать больше</Btn>
+          </div>
+          <div class="carousel__slide-right"></div></div
+      ></slot>
       <aside class="carousel__navigation">
         <ul class="carousel__navigation-list">
           <li class="carousel__navigation-item_active"></li>
@@ -49,14 +50,17 @@
 </template>
 
 <script>
-export default {};
+import Btn from './Btn.vue';
+export default {
+  components: { Btn },
+};
 </script>
 
 <style lang="scss" scoped>
 .carousel {
   position: relative;
   width: 100%;
-  height: 522px;
+  height: 62.5vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -99,17 +103,6 @@ export default {};
     font-weight: 400;
     font-size: 16px;
     color: var(--p-text-color);
-  }
-  &__btn {
-    width: 226px;
-    height: 55px;
-    border-radius: 193px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    background-color: var(--red-btn);
   }
   &__navigation {
     width: 148px;
