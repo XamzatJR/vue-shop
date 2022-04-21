@@ -26,6 +26,47 @@
         </div>
       </div>
     </section>
+    <section class="popular-products">
+      <h2 class="popular-products__title">Популярные товары</h2>
+      <Carousel>
+        <div class="popular-products__cards">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
+      </Carousel>
+    </section>
+    <article class="banner">
+      <div class="banner-left">
+        <h2 class="banner__title">
+          Не знаешь что подарить? – ответь <br />
+          на 7 вопросов и мы дадим решение
+        </h2>
+        <Btn class="btn__red">Пройти опрос</Btn>
+      </div>
+      <img src="../assets/img/banner-img.png" alt="" />
+    </article>
+    <section class="promotion">
+      <h2 class="title">Акция</h2>
+      <Carousel>
+        <div class="promotion__cards">
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
+      </Carousel>
+    </section>
+    <section class="articles">
+      <div class="articles-top">
+        <h2 class="title">Статьи</h2>
+        <Btn class="btn-view__green">Посмотреть все</Btn>
+      </div>
+      <div class="articles-bottom">
+        <!-- Article here -->
+      </div>
+    </section>
   </div>
   <br />
   <br />
@@ -39,6 +80,8 @@
 import Header from '@/components/Header.vue';
 import Carousel from '@/components/Carousel.vue';
 import Footer from '@/components/Footer.vue';
+import Card from '@/components/Card.vue';
+import Btn from '../components/Btn.vue';
 
 export default {
   name: 'Home',
@@ -46,6 +89,8 @@ export default {
     Header,
     Carousel,
     Footer,
+    Card,
+    Btn,
   },
 };
 </script>
@@ -55,9 +100,16 @@ export default {
   height: 100%;
   padding: 0 47px;
 }
+.title {
+  font-weight: 500;
+  font-size: 40px;
+  color: var(--title-text-color);
+  margin-bottom: 43px;
+  width: 87%;
+}
 .product-categories {
   padding: 0 62px;
-  margin-top: 185px;
+  margin: 185px 0;
   width: 100%;
   height: 587px;
   display: flex;
@@ -108,6 +160,46 @@ export default {
     flex-direction: row;
     width: 718px;
     height: 260px;
+  }
+}
+.popular-products {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__cards {
+    display: flex;
+  }
+}
+.banner {
+  margin: 140px 62px;
+  height: 302px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #ffc979;
+  border-radius: 36px;
+  &-left {
+    height: 57%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 40px;
+    color: #282828;
+  }
+}
+.promotion {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__cards {
+    display: flex;
   }
 }
 </style>
