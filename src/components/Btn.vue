@@ -21,7 +21,9 @@ export default {
   &-view {
     border-bottom: 1px solid #ff4d4d;
     color: var(--red-btn);
+    width: fit-content;
     &__green {
+      height: fit-content;
       color: var(--green-btn);
       border-bottom: 1px solid #16c1a1;
     }
