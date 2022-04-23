@@ -27,7 +27,7 @@
       </div>
     </section>
     <section class="popular-products">
-      <h2 class="popular-products__title">Популярные товары</h2>
+      <h2 class="title">Популярные товары</h2>
       <Carousel>
         <div class="popular-products__cards">
           <Card />
@@ -252,14 +252,22 @@ export default {
   }
 }
 .articles {
+  margin: 140px 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &-top {
     display: flex;
     justify-content: space-between;
+    width: 87%;
     align-items: center;
   }
   &-bottom {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: space-evenly;
     .article {
       width: 652px;
       height: 305px;
