@@ -1,11 +1,21 @@
 <template>
-  <Home />
+  <Header />
+  <!-- <Home /> -->
+  <Cart />
+  <Footer />
 </template>
 <script>
-import Home from '@/views/Home.vue';
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
+
+// import Home from '@/views/Home.vue';
+import Cart from '@/views/Cart.vue';
 export default {
   components: {
-    Home,
+    // Home,
+    Cart,
+    Header,
+    Footer,
   },
 };
 </script>

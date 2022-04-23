@@ -1,5 +1,4 @@
 <template>
-  <Header />
   <div class="container">
     <Carousel />
     <section class="product-categories">
@@ -117,27 +116,17 @@
       </div>
     </section>
   </div>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <Footer />
 </template>
 
 <script>
-import Header from '@/components/Header.vue';
 import Carousel from '@/components/Carousel.vue';
-import Footer from '@/components/Footer.vue';
 import Card from '@/components/Card.vue';
 import Btn from '../components/Btn.vue';
 
 export default {
   name: 'Home',
   components: {
-    Header,
     Carousel,
-    Footer,
     Card,
     Btn,
   },
