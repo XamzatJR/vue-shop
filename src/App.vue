@@ -1,19 +1,19 @@
 <template>
   <Header />
-  <!-- <Home /> -->
-  <Cart />
+  <Home />
+  <!-- <Cart /> -->
   <Footer />
 </template>
 <script>
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 
-// import Home from '@/views/Home.vue';
-import Cart from '@/views/Cart.vue';
+import Home from '@/views/Home.vue';
+// import Cart from '@/views/Cart.vue';
 export default {
   components: {
-    // Home,
-    Cart,
+    Home,
+    // Cart,
     Header,
     Footer,
   },

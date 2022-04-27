@@ -20,16 +20,16 @@
       </div>
     </nav>
     <div class="menu">
-      <a href="#" class="menu__logo">
+      <router-link :to="{ name: 'Home' }" class="menu__logo">
         <img src="@/assets/icons/logo.svg" alt="логотип сайта gift.ru" />
-      </a>
-      <button class="catalog">
+      </router-link>
+      <button @click="$router.push({ name: 'Catalog' })" class="catalog">
         <img :src="catalogIcon" alt="" />
         Каталог
       </button>
       <nav class="nav">
-        <a class="a" href="#">Вопрос-ответ</a>
-        <a class="a" href="#">Статьи</a>
+        <router-link :to="{ name: 'Q&A' }" class="a">Вопрос-ответ</router-link>
+        <router-link :to="{ name: 'Articles' }" class="a">Статьи</router-link>
       </nav>
       <label class="search">
         <input class="search__input" placeholder="Поиск" type="text" name="search" />
@@ -38,14 +38,15 @@
       <div class="icons">
         <img class="icon" :src="userIcon" alt="" />
         <img class="icon" :src="starIcon" alt="" />
-        <img class="icon" :src="heartIcon" alt="" />
+        <img @click="$router.push({ name: 'WishList' })" class="icon" :src="heartIcon" alt="" />
         <label class="cart">
-          <img class="icon" :src="cartIcon" alt="" />
+          <img @click="$router.push({ name: 'Cart' })" class="icon" :src="cartIcon" alt="" />
           <span class="cart__counter">1</span>
         </label>
       </div>
     </div>
   </header>
+  <router-view></router-view>
 </template>
 
 <script>
@@ -148,6 +149,7 @@ export default {
       }
     }
     &__btn {
+      cursor: pointer;
       position: absolute;
       bottom: -3px;
       right: 8px;

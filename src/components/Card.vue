@@ -43,13 +43,7 @@
       <del class="card__old-price">4600 p.</del>
     </div>
     <div class="card__bottom">
-      <ul class="card__rating">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+      <Rating />
       <strong class="card__price">2500 р.</strong>
     </div>
     <Btn class="btn__green">Добавить в корзину</Btn>
@@ -59,8 +53,9 @@
 
 <script>
 import Btn from './Btn.vue';
+import Rating from './Rating.vue';
 export default {
-  components: { Btn },
+  components: { Btn, Rating },
 };
 </script>
 
@@ -106,10 +101,7 @@ export default {
     width: 100%;
     display: flex;
     justify-content: space-between;
-  }
-
-  &__rating {
-    list-style: none;
+    align-items: center;
   }
 
   &__name {
