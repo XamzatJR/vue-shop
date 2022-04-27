@@ -16,18 +16,34 @@
         </div>
         <div class="cart-list__item-count">
           <button class="cart-list__item-count-minus">-</button>
-          <span>1</span>
+          <span class="cart-list__item-count-counter">1</span>
           <button class="cart-list__item-count-plus">+</button>
         </div>
         <strong class="cart-list__item-price">2500 р.</strong>
         <button class="cart-list__item-remove"></button>
       </div>
+      <div class="cart-list__item">
+        <img class="cart-list__item__img" src="../assets/img/cart-img.png" alt="" />
+        <div class="cart-list__item-info">
+          <h4 class="cart-list__item-info__name">
+            Кружка PrioritY "Paw Patrol / Щенячий патруль"...
+          </h4>
+          <div class="cart-list__item-info__code">Код товара: 2398643Р</div>
+        </div>
+        <div class="cart-list__item-count">
+          <button class="cart-list__item-count-minus">-</button>
+          <span class="cart-list__item-count-counter">2</span>
+          <button class="cart-list__item-count-plus">+</button>
+        </div>
+        <strong class="cart-list__item-price">5000 р.</strong>
+        <button class="cart-list__item-remove"></button>
+      </div>
     </ul>
     <div class="cart-total">
-      <div>Окончательная стоимость:</div>
-      <strong>5000 р.</strong>
+      <div class="cart-total__title">Окончательная стоимость:</div>
+      <strong class="cart-total__price">5000 р.</strong>
     </div>
-    <div>
+    <div class="cart-next">
       <Btn class="btn-view__green">Продолжить покупки</Btn>
       <Btn class="btn__purple">Перейти к оформлению</Btn>
     </div>
@@ -49,6 +65,8 @@ export default {
   padding: 0 109px;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 140px;
   &__title {
     font-weight: 500;
     font-size: 40px;
@@ -79,20 +97,41 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-bottom: 1px solid #f3f3f3;
       &__img {
+        max-width: 120px;
+        max-height: 150px;
       }
       &-info {
+        flex-basis: 22%;
+        &__name {
+          font-weight: 700;
+          font-size: 19px;
+          color: var(--title-text-color);
+        }
+        &__code {
+          color: var(--tertiary-text-color);
+          margin-top: 9px;
+        }
       }
       &-count {
         flex-basis: 18%;
+        display: flex;
+        align-items: center;
         &-plus,
         &-minus {
+          cursor: pointer;
           width: 25px;
           height: 25px;
           color: #fff;
           background-color: var(--rating);
           border: none;
           border-radius: 50%;
+        }
+        &-counter {
+          margin: 0 14px;
+          font-size: 24px;
+          color: #535353;
         }
       }
       &-price {
@@ -127,6 +166,24 @@ export default {
           transform: rotate(-45deg);
         }
       }
+    }
+  }
+  &-total,
+  &-next {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    width: 35%;
+    justify-content: space-between;
+    &__title {
+      font-weight: 500;
+      font-size: 22px;
+      color: var(--tertiary-text-color);
+    }
+    &__price {
+      font-weight: 700;
+      font-size: 35px;
+      color: var(--red-btn);
     }
   }
 }
